@@ -3,7 +3,9 @@
 allprojects {
 		repositories {
 			...
+			
 			maven { url 'https://jitpack.io' }
+			
 			maven { url "http://dl.appnext.com/" }
 		}
 	}
