@@ -21,6 +21,8 @@ dependencies {
 	
 Android Manifest 
 
+ 	 <uses-permission android:name="android.permission.INTERNET" />
+
 	<application
 	
 		...
