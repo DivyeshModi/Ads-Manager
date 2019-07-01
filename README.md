@@ -12,7 +12,7 @@
 	
 dependencies {
 
-	        implementation 'com.github.DivyeshModi:Ads-Manager:v1.0.0'
+	        implementation 'com.github.DivyeshModi:Ads-Manager:v1.0.1'
 	
 	}
 	
