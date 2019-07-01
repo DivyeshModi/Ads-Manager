@@ -22,6 +22,9 @@ dependencies {
 Android Manifest 
 
 	<application
+	
+		...
+		
  		android:networkSecurityConfig="@xml/network_security_config"
 
 		<meta-data
