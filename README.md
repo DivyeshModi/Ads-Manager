@@ -19,9 +19,9 @@ dependencies {
 	
 	}
 	
-Android Manifest : 
+Android Manifest 
 
-<meta-data
+	<meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="YOUR_APP_ID" />
 	
