@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/ll_line">
+
+        <RelativeLayout
+            android:id="@+id/rect_re"
+            android:layout_width="fill_parent"
+            android:layout_height="250.0dip"
+            android:layout_margin="2.0dip"
+            android:background="@drawable/bg_ads_border">
+
+            <LinearLayout
+                android:id="@+id/banner_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="2.0dip" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@id/btn_start"
+            android:layout_width="150.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5.0dip"
+            android:background="@color/colorPrimary"
+            android:text="Start"
+            android:textColor="#FFFFFF"
+            android:textSize="22.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:background="#ffff4500" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffcccccc">
+
+            <RelativeLayout
+                android:id="@+id/native_banner_ad_container"
+                android:layout_width="wrap_content"
+                android:layout_height="60.0dip"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:background="#ffff4500" />
+    </LinearLayout>
+</RelativeLayout>

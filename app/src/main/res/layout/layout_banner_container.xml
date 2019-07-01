@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/banner_container"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_ads_banner_border"
+    android:gravity="center"
+    android:paddingTop="2.0dip"
+    android:paddingBottom="2.0dip"
+    android:visibility="gone" />
