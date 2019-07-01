@@ -1,7 +1,5 @@
 # Ads Manager
 
-allprojects {
-
 		repositories {
 			
 			...
@@ -10,7 +8,6 @@ allprojects {
 			
 			maven { url "http://dl.appnext.com/" }
 		}
-	}
 	
 	
 dependencies {
