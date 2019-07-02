@@ -190,7 +190,7 @@ public class MyAdsManager {
             public void onError(Ad ad, AdError adError) {
                 Log.e("LLLL_FB_Banner", "FB Banner failed to load : " + adError.getErrorMessage());
                 AdView admob_banner_ad = new AdView(ac);
-                admob_banner_ad.setAdSize(AdSize.SMART_BANNER);
+                admob_banner_ad.setAdSize(AdSize.BANNER);
                 admob_banner_ad.setAdUnitId(admob_id);
                 relativeLayout.addView(admob_banner_ad);
                 AdRequest admob_ad_request = new AdRequest.Builder().build();
