@@ -14,7 +14,7 @@ import com.example.adsmodule.MyAdsManager;
 public class AdsActivity extends AppCompatActivity {
 
     private Activity ac;
-    private LinearLayout native_container;
+    private RelativeLayout native_container;
     private RelativeLayout banner_container;
     private Button btn_start;
 

@@ -268,10 +268,10 @@ public class MyAdsManager {
         fb_nativeBannerAd.registerViewForInteraction(linear_adView, adIconView, clickableViews);
     }
 
-    public static void Load_Native_Ad(final Activity ac, final LinearLayout linearLayout, String fb_id, final String admob_id, final String appnext_id) {
+    public static void Load_Native_Ad(final Activity ac, final RelativeLayout relativeLayout, String fb_id, final String admob_id, final String appnext_id) {
         AdSettings.addTestDevice(device_id);       //Div
         com.facebook.ads.AdView adView = new com.facebook.ads.AdView(ac, fb_id, com.facebook.ads.AdSize.RECTANGLE_HEIGHT_250);
-        linearLayout.addView(adView);
+        relativeLayout.addView(adView);
         adView.loadAd();
         adView.setAdListener(new com.facebook.ads.AdListener() {
             @Override
@@ -280,14 +280,14 @@ public class MyAdsManager {
                 AdView admob_native_ad = new AdView(ac);
                 admob_native_ad.setAdSize(AdSize.MEDIUM_RECTANGLE);
                 admob_native_ad.setAdUnitId(admob_id);
-                linearLayout.addView(admob_native_ad);
+                relativeLayout.addView(admob_native_ad);
                 AdRequest admob_ad_request = new AdRequest.Builder().build();
                 admob_native_ad.loadAd(admob_ad_request);
                 admob_native_ad.setAdListener(new AdListener() {
                     @Override
                     public void onAdLoaded() {
                         super.onAdLoaded();
-                        linearLayout.setVisibility(View.VISIBLE);
+                        relativeLayout.setVisibility(View.VISIBLE);
                     }
 
                     @Override
@@ -307,14 +307,14 @@ public class MyAdsManager {
                                 if (AppNext_native_ad != nativeAd) {
                                     return;
                                 }
-                                inflate_AppNext_Native(ac, linearLayout, nativeAd);
+                                inflate_AppNext_Native(ac, relativeLayout, nativeAd);
                             }
 
                             @Override
                             public void onError(NativeAd nativeAd, AppnextError appnextError) {
                                 super.onError(nativeAd, appnextError);
                                 Log.e("LLLL_AppNext_Native :", "AppNext Native failed to load : " + appnextError.getErrorMessage());
-                                linearLayout.setVisibility(View.GONE);
+                                relativeLayout.setVisibility(View.GONE);
                             }
                         });
                     }
@@ -323,7 +323,7 @@ public class MyAdsManager {
 
             @Override
             public void onAdLoaded(Ad ad) {
-                linearLayout.setVisibility(View.VISIBLE);
+                relativeLayout.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -336,10 +336,10 @@ public class MyAdsManager {
         });
     }
 
-    private static void inflate_AppNext_Native(Activity ac, LinearLayout linearLayout, NativeAd nativeAd) {
-        NativeAdView adView = (NativeAdView) LayoutInflater.from(ac).inflate(R.layout.appnext_native, linearLayout, false);
-        linearLayout.addView(adView);
-        linearLayout.setVisibility(View.VISIBLE);
+    private static void inflate_AppNext_Native(Activity ac, RelativeLayout relativeLayout, NativeAd nativeAd) {
+        NativeAdView adView = (NativeAdView) LayoutInflater.from(ac).inflate(R.layout.appnext_native, relativeLayout, false);
+        relativeLayout.addView(adView);
+        relativeLayout.setVisibility(View.VISIBLE);
 
         NativeAdView nativeAdView = adView.findViewById(R.id.na_view);
         ImageView imageView = adView.findViewById(R.id.na_icon);
