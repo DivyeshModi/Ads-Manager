@@ -12,7 +12,7 @@
 	
 dependencies {
 
-	        implementation 'com.github.DivyeshModi:Ads-Manager:6bb779b88a'
+	        implementation 'com.github.DivyeshModi:Ads-Manager:d4ddf3d9ae'
     	implementation 'com.facebook.android:audience-network-sdk:5.4.0'   //adapter
 	
 	}
