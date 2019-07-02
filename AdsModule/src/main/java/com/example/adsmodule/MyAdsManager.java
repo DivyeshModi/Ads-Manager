@@ -32,6 +32,7 @@ import com.facebook.ads.AdChoicesView;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
 import com.facebook.ads.AdSettings;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 import com.facebook.ads.NativeAdListener;
@@ -47,6 +48,7 @@ import java.util.List;
 
 public class MyAdsManager {
 
+    private static boolean is_initialize = false;
     private static int color;
     private static int loader_color = Color.parseColor("#D81B60");
 
@@ -66,6 +68,12 @@ public class MyAdsManager {
     }
 
     public static void CreateInterstitial(final Activity ac, final Intent intent, String fb_id, final String admob_id, final String appnext_id) {
+        if (!is_initialize) {
+            AudienceNetworkAds.initialize(ac);
+            is_initialize = true;
+            Log.e("LLLL :", "Initialize");
+        }
+
         final CustomDialogClass customDialog = new CustomDialogClass(ac, loader_color);
         customDialog.show();
 
@@ -165,6 +173,11 @@ public class MyAdsManager {
     }
 
     public static void Load_Native_Banner(final Activity ac, final RelativeLayout relativeLayout, String fb_id, final String admob_id, final String appnext_id) {
+        if (!is_initialize) {
+            AudienceNetworkAds.initialize(ac);
+            is_initialize = true;
+            Log.e("LLLL :", "Initialize");
+        }
         AdSettings.addTestDevice(device_id);       //Div
         final NativeBannerAd FB_nativeBannerAd = new NativeBannerAd(ac, fb_id);
         FB_nativeBannerAd.loadAd();
@@ -269,6 +282,11 @@ public class MyAdsManager {
     }
 
     public static void Load_Native_Ad(final Activity ac, final RelativeLayout relativeLayout, String fb_id, final String admob_id, final String appnext_id) {
+        if (!is_initialize) {
+            AudienceNetworkAds.initialize(ac);
+            is_initialize = true;
+            Log.e("LLLL :", "Initialize");
+        }
         AdSettings.addTestDevice(device_id);       //Div
         com.facebook.ads.AdView adView = new com.facebook.ads.AdView(ac, fb_id, com.facebook.ads.AdSize.RECTANGLE_HEIGHT_250);
         relativeLayout.addView(adView);
